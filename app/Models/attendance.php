@@ -77,4 +77,7 @@ class attendance extends Model
     {
         return $this->belongsTo(\App\Models\Class1::class, 'class1_id');
     }
+	
+	
+	
 }

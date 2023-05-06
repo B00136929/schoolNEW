@@ -17,7 +17,7 @@
                 <td>{{ $attendance->student_id }}</td>
             <td>{{ $attendance->class1_id }}</td>
             <td>{{ $attendance->date1 }}</td>
-            <td>{{ $attendance->present }}</td>
+            <td>{{ $attendance->present ? 'Yes' : 'No' }}</td>
                 <td width="120">
                     {!! Form::open(['route' => ['attendances.destroy', $attendance->id], 'method' => 'delete']) !!}
                     <div class='btn-group'>

@@ -9,6 +9,8 @@ use App\Http\Controllers\AppBaseController;
 use Illuminate\Http\Request;
 use Flash;
 use Response;
+use App\Models\Student as Student; 
+use App\Models\Class1 as Class1;
 
 class attendanceController extends AppBaseController
 {
@@ -42,7 +44,12 @@ class attendanceController extends AppBaseController
      */
     public function create()
     {
-        return view('attendances.create');
+        //Find all members from the DB and return as an array of Member.php objects
+		 $students = Student::all();
+		 //Find all courts from the DB and return as an array of Court.php objects
+		 $class1s = Class1::all();
+		 //return the bookings.create view with $members and $courts as view variables
+		 return view('attendances.create')->with('students',$students)->with('class1s',$class1s);
     }
 
     /**

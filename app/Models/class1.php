@@ -82,4 +82,9 @@ class class1 extends Model
     {
         return $this->belongsToMany(\App\Models\Student::class, 'enrollment');
     }
+	
+	public function __toString()
+	{
+		return "class#" . $this->id;
+	}
 }

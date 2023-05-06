@@ -1,13 +1,21 @@
 <!-- Student Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('student_id', 'Student Id:') !!}
-    {!! Form::number('student_id', null, ['class' => 'form-control']) !!}
+	<select name ="studentid" class="form-control">
+    @foreach($students as $student)
+		<option value='{{$student->id}}'>{{$student}}</option>
+	@endforeach
+	</select>
 </div>
 
 <!-- Class1 Id Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('class1_id', 'Class1 Id:') !!}
-    {!! Form::number('class1_id', null, ['class' => 'form-control']) !!}
+	<select name ="class1id" class="form-control">
+    @foreach($class1s as $class1)
+		<option value='{{$class1->id}}'>{{$class1}}</option>
+	@endforeach
+	</select>
 </div>
 
 <!-- Date1 Field -->
