@@ -1,0 +1,12 @@
+.nav{
+  float:right;
+}
+
+.navbar {
+    background-color: #BFE3FF; 
+}
+
+.navbar-nav > li > a {
+    color: orange;
+    font-size: 18px; 
+}

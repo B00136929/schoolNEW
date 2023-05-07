@@ -1,4 +1,5 @@
 <ul class="nav navbar-nav pull-right"> 
+<link rel="stylesheet" type="text/css" href="css/nav.css" />
 	@if(Auth::guest())
     <li>
 		<a href="{{route('register')}}">Register
@@ -19,14 +20,15 @@
             <form action="{{ route('logout') }}" method="POST">
             @csrf
                 <button type="submit" class="btn btn-primary" style="color: orange; 
-	background-color: 
-	transparent; border: 
-	2px solid orange; 
-	padding: 10px;
-	font-size: 18px; 
-	font-weight: bold;" onmouseover="this.style.backgroundColor='orange'; 
-	this.style.color='white';" onmouseout="this.style.backgroundColor='transparent'; 
-	this.style.color='orange';">
+				background-color: transparent; 
+				border: 2px solid orange; 
+				padding: 10px;
+				font-size: 18px; 
+				font-weight: bold;
+				" onmouseover="this.style.backgroundColor='orange'; 
+				this.style.color='white';
+				" onmouseout="this.style.backgroundColor='transparent'; 
+				this.style.color='orange';">
                     <span class="glyphicon glyphicon-log-out"></span> Log out
                 </button>
             </form>
