@@ -17,6 +17,7 @@
 				<li><a href="{{ route('class1s.index') }}">class1 list</a></li>
 				<li><a href="{{ route('attendances.index') }}">attendance list</a></li>
             </ul> 
+			@include('layouts.navAuth')
         </nav> 
         <div id="page-content-wrapper"> 
             <div class="container-fluid"> 
