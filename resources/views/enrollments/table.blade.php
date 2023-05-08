@@ -1,12 +1,12 @@
 <div class="table-responsive">
     <table class="table" id="enrollments-table">
-        <thead>
+        <thead style="color: black; border: 2px solid black;">
         <tr>
             <th>Class1 Id</th>
             <th colspan="3">Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody style="color: black; border: 2px solid black;">
         @foreach($enrollments as $enrollment)
             <tr>
                 <td>{{ $enrollment->class1_id }}</td>

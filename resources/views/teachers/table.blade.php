@@ -1,6 +1,7 @@
 <div class="table-responsive">
     <table class="table" id="teachers-table">
-        <thead>
+        <thead style="color: black; border: 2px solid black;">
+		
         <tr>
 		<th>teacher id</th>
             <th>Firstname</th>
@@ -10,7 +11,7 @@
             <th colspan="3">Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody style="color: black; border: 2px solid black;">
         @foreach($teachers as $teacher)
             <tr>
 			<td>{{ $teacher->id }}</td>

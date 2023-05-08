@@ -1,6 +1,6 @@
 <div class="table-responsive">
     <table class="table" id="attendances-table">
-        <thead>
+        <thead style="color: black; border: 2px solid black;">
         <tr>
 		<th>attendance Id</th>
             <th>Student Id</th>
@@ -10,7 +10,7 @@
             <th colspan="3">Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody style="color: black; border: 2px solid black;">
         @foreach($attendances as $attendance)
             <tr>
 			<td>{{ $attendance->id }}</td>

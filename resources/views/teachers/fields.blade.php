@@ -28,6 +28,6 @@
             format: 'YYYY-MM-DD HH:mm:ss',
             useCurrent: true,
             sideBySide: true
-        })
+        });
     </script>
 @endpush

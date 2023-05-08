@@ -1,8 +1,7 @@
 <div class="table-responsive">
     <table class="table" id="students-table">
-        <thead>
+        <thead style="color: black; border: 2px solid black;">
         <tr>
-		<th>student id</th>
             <th>Firstname</th>
         <th>Surname</th>
         <th>Dateofbirth</th>
@@ -11,10 +10,9 @@
             <th colspan="3">Action</th>
         </tr>
         </thead>
-        <tbody>
+        <tbody style="color: black; border: 2px solid black;"> 
         @foreach($students as $student)
             <tr>
-			<td>{{ $student->id }}</td>
                 <td>{{ $student->firstname }}</td>
             <td>{{ $student->surname }}</td>
             <td>{{ $student->dateofbirth }}</td>
@@ -31,6 +29,9 @@
                            class='btn btn-default btn-xs'>
                             <i class="far fa-edit"></i>
                         </a>
+						<!--  <a href="{!! route('studentratings.ratestudent', [$student->id]) !!}"
+						class='btn btn-default btn-xs'><i class="glyphicon glyphicon-ok"> -->
+						</i></a>
                         {!! Form::button('<i class="far fa-trash-alt"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                     </div>
                     {!! Form::close() !!}

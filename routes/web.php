@@ -21,6 +21,10 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [App\Http\Controllers\Auth\LoginController::class, 'login']);
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])->name('logout');
+
+Route::get('/studentratings/ratestudent/{student}','studentratingController@ratestudent')->name('studentratings.ratestudent');
+
+
 Auth::routes();
 
 
@@ -52,3 +56,5 @@ Route::resource('class1s', App\Http\Controllers\class1Controller::class);
 
 
 Route::resource('attendances', App\Http\Controllers\attendanceController::class);
+
+Route::resource('studentratings', App\Http\Controllers\studentratingController::class);

@@ -9,10 +9,10 @@ use Illuminate\Database\Eloquent\Model as Model;
 /**
  * Class student
  * @package App\Models
- * @version May 3, 2023, 4:33 pm UTC
+ * @version May 7, 2023, 9:35 pm UTC
  *
  * @property \Illuminate\Database\Eloquent\Collection $attendances
- * @property \Illuminate\Database\Eloquent\Collection $class1s
+ * @property \Illuminate\Database\Eloquent\Collection $studentratings
  * @property string $firstname
  * @property string $surname
  * @property string $dateofbirth
@@ -75,15 +75,10 @@ class student extends Model
     }
 
     /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      **/
-    public function class1s()
+    public function studentratings()
     {
-        return $this->belongsToMany(\App\Models\Class1::class, 'enrollment');
+        return $this->hasMany(\App\Models\Studentrating::class, 'student_id');
     }
-	
-	public function __toString()
-	{
-		return "student#" . $this->id;
-	}
 }
